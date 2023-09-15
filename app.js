@@ -113,40 +113,38 @@
 //scroll to company's card ( needs refactoring change the 'top' value)
 
     const faroButton = document.getElementById('faro-button');
-    faroButton.addEventListener('click', ()=>{
-        const div = document.getElementById("scrollable-cards");
-            // smooth scroll to the bottom of the div
-            div.scrollTo({
-                top: 670,
-                behavior: 'smooth'
-            });
-    })
-
     const exaudButton = document.getElementById('exaud-button');
-    exaudButton.addEventListener('click', ()=>{
-        const div = document.getElementById("scrollable-cards");
-            // smooth scroll to the bottom of the div
-            div.scrollTo({
-                top: 1340,
-                behavior: 'smooth'
-            });
-    })
-
     const tlanticButton = document.getElementById('tlantic-button');
-    tlanticButton.addEventListener('click', ()=>{
-        const div = document.getElementById("scrollable-cards");
-            // smooth scroll to the bottom of the div
+    const questionButton = document.getElementById('???-button');
+    const div = document.getElementById("scrollable-cards");
+    
+    faroButton.addEventListener('click', ()=>{
+            console.log(div.scrollHeight);
             div.scrollTo({
-                top: 2010,
+                top: div.scrollHeight/5,
                 behavior: 'smooth'
             });
     })
 
-    const questionButton = document.getElementById('???-button');
+   
+    exaudButton.addEventListener('click', ()=>{
+            div.scrollTo({
+                top: div.scrollHeight/5*2,
+                behavior: 'smooth'
+            });
+    })
+
+    
+    tlanticButton.addEventListener('click', ()=>{
+            div.scrollTo({
+                top: div.scrollHeight/5*3,
+                behavior: 'smooth'
+            });
+    })
+
+    
 
     questionButton.addEventListener('click', ()=>{
-
-        const div = document.getElementById("scrollable-cards");
             // smooth scroll to the bottom of the div
             div.scrollTo({
                 top: div.scrollHeight,
