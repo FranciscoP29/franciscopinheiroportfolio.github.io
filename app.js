@@ -112,41 +112,56 @@
 
 //scroll to company's card ( needs refactoring change the 'top' value)
 
-    const faroButton = document.getElementById('faro-button');
-    const exaudButton = document.getElementById('exaud-button');
-    const tlanticButton = document.getElementById('tlantic-button');
-    const questionButton = document.getElementById('???-button');
+    // const faroButton = document.getElementById('faro-button');
+    // const exaudButton = document.getElementById('exaud-button');
+    // const tlanticButton = document.getElementById('tlantic-button');
+    // const questionButton = document.getElementById('???-button');
     const div = document.getElementById("scrollable-cards");
-    
-    faroButton.addEventListener('click', ()=>{
-            div.scrollTo({
-                top: div.scrollHeight/5,
-                behavior: 'smooth'
-            });
-    })
+    const companyCards = document.getElementsByClassName('journey-circle');
+
+    for(let i=0;i<companyCards.length;i++){
+        companyCards[i].addEventListener('click', 
+        scrollToCompany.bind(null,i+1)
+        )
+    }
+  
+    function scrollToCompany(elemPos){
+        div.scrollTo({
+            top: div.scrollHeight/5*elemPos,
+            behavior: 'smooth'
+        });
+    }
+   
+    // faroButton.addEventListener('click', ()=>{
+    //         div.scrollTo({
+    //             top: div.scrollHeight/5,
+    //             behavior: 'smooth'
+    //         });
+    // })
 
    
-    exaudButton.addEventListener('click', ()=>{
-            div.scrollTo({
-                top: div.scrollHeight/5*2,
-                behavior: 'smooth'
-            });
-    })
+    // exaudButton.addEventListener('click', ()=>{
+    //         div.scrollTo({
+    //             top: div.scrollHeight/5*2,
+    //             behavior: 'smooth'
+    //         });
+    // })
 
     
-    tlanticButton.addEventListener('click', ()=>{
-            div.scrollTo({
-                top: div.scrollHeight/5*3,
-                behavior: 'smooth'
-            });
-    })
+    // tlanticButton.addEventListener('click', ()=>{
+    //         div.scrollTo({
+    //             top: div.scrollHeight/5*3,
+    //             behavior: 'smooth'
+    //         });
+    // })
 
     
 
-    questionButton.addEventListener('click', ()=>{
-            // smooth scroll to the bottom of the div
-            div.scrollTo({
-                top: div.scrollHeight,
-                behavior: 'smooth'
-            });
-    })
+    // questionButton.addEventListener('click', ()=>{
+    //         // smooth scroll to the bottom of the div
+    //         div.scrollTo({
+    //             top: div.scrollHeight,
+    //             behavior: 'smooth'
+    //         });
+    // })
+
