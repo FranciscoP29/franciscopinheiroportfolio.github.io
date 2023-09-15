@@ -473,7 +473,8 @@ body::-webkit-scrollbar{
 }
 
 .footer{
-    height:80vh;
+    min-height:80vh;
+    height:fit-content;
     width:100%;
     position:relative;
     background:var(--strip-background-color);
@@ -494,7 +495,7 @@ body::-webkit-scrollbar{
     margin-top:2vw;
     height:70%;
     width:70%;
-    /* border:2px solid blue; */
+    /* border:5px solid blue; */
     display:flex;
     flex-direction: column;
     justify-content: space-between;
@@ -604,9 +605,10 @@ body::-webkit-scrollbar{
 .bottom-footer{
     height:30%;
     width:100%;
-    /* border:2px solid green; */
+    /* border:5px solid green; */
     display:flex;
     justify-content: space-between;
+    align-items: end;
 }
 
 .portfolio-version{
@@ -809,7 +811,8 @@ body::-webkit-scrollbar{
     }
 
     .footer{
-        height:63vh;
+        min-height:63vh;
+        height:fit-content;
     }
 
     .footer-container{
@@ -834,7 +837,7 @@ body::-webkit-scrollbar{
         width: 100%;
         /* border:2px solid cyan; */
         padding:13px;
-        font-size: 21vw;
+        font-size: 19vw;
     }
 
     .pfp-small{
@@ -857,7 +860,7 @@ body::-webkit-scrollbar{
     .get-in-touch-button{
         min-width: 100px;
         width:fit-content;
-        padding:4vw;
+        padding:3vw;
         border-radius:150px;
         text-decoration: none;
         display: flex;

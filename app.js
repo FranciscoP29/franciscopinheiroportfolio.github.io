@@ -119,7 +119,6 @@
     const div = document.getElementById("scrollable-cards");
     
     faroButton.addEventListener('click', ()=>{
-            console.log(div.scrollHeight);
             div.scrollTo({
                 top: div.scrollHeight/5,
                 behavior: 'smooth'
