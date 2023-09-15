@@ -1,0 +1,145 @@
+<section class="hero-section">
+    <div class="hero-section-container">
+        <div class="frontend-dev">
+            <div class="front-end-dev-text">
+                <p id="frontend">
+                    Frontend
+                </p>
+                <p id="developer" class="type">
+                    Developer
+                </p>
+            </div>
+        </div>
+        <div class="infinite-horizontal-name">
+            <div class="infinite-horizontal-name-container">
+                <div class="scroll-horizontal-name">
+                    <div class="left-to-right">
+                        <p>	&#45; Francisco Pinheiro &#45; Francisco Pinheiro &#45; Francisco Pinheiro &#45; Francisco Pinheiro &#45;</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+.hero-section{
+    height: 90vh;
+    width:100%;
+    /*
+    padding-top:var(--navbar-height);
+    */
+    background:url('imgs/pngegg.png'),var(--color-bg-hero);
+    background-repeat: no-repeat;
+    background-size: 60vh,cover;
+    background-position: bottom,center;
+    /*
+    border:2px solid hotpink;
+    */
+    position: relative;
+}
+
+.hero-section-container{
+    height:90vh;
+    /*margin-top:var(--navbar-height);*/
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.frontend-dev{
+    height:65%;
+    width: 100%;
+    /*
+    border:2px solid green;
+    */
+    display:flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.front-end-dev-text{
+display: inline;
+}
+
+#frontend{
+    position: absolute;
+    color:var(--color-white);
+    font-size: var(--frontend-font-size);
+    right:var(--frontend-right);
+    top:var(--frontend-top);
+}
+
+#developer{
+    position:absolute;
+    color: var(--color-white);
+    font-size: var(--frontend-font-size);
+    right: var(--developer-right);
+    top: var(--developer-top);
+    border-right: 5px solid var(--color-white);
+    width:20%;
+    white-space: nowrap;
+    overflow:hidden;
+    animation:typing 2s steps(10), 
+    cursor .4s step-end infinite alternate;
+    
+}
+
+ @keyframes cursor {
+    50% { border-color: transparent }
+}
+
+@keyframes typing {
+    from { width: 0 }
+} 
+
+.infinite-horizontal-name{
+    height:35%;
+    width:100%;
+    /*
+    border:2px solid greenyellow;
+    */
+    position: relative;
+}
+
+.infinite-horizontal-name-container{
+    height: 100%;
+    width: 100%;
+    display:flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.scroll-horizontal-name{
+    white-space: nowrap;
+    margin:0 2em;
+}
+
+.scroll-horizontal-name div{
+    display: flex;
+    gap:2em;
+}
+
+.scroll-horizontal-name p {
+    font-size: 13vw;
+    color: var(--color-white);
+    font-weight: bold;
+    margin-bottom: 0;
+    line-height: 10px
+}
+
+.left-to-right {
+    animation: LeftToRight 25s infinite linear;
+}
+
+@keyframes LeftToRight {
+    from {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
